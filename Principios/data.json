@@ -1,0 +1,51 @@
+[
+    {
+        "firstName": "vinicius",
+        "secondName": "franca",
+        "city": "Salvador",
+        "bloodType": "B",
+        "age": 22
+    },
+    {
+        "firstName": "caio",
+        "secondName": "abreu",
+        "city": "Recife",
+        "bloodType": "A",
+        "age": 26
+    },
+    {
+        "firstName": "isaac",
+        "secondName": "newton",
+        "city": "oxford",
+        "bloodType": "O",
+        "age": 31
+    },
+    {
+        "firstName": "sun",
+        "secondName": "wukong",
+        "city": "Macau",
+        "bloodType": "A",
+        "age": 5684
+    },
+    {
+        "firstName": "alvin",
+        "secondName": "esquilo",
+        "city": "New York",
+        "bloodType": "B",
+        "age": 4
+    },
+    {
+        "firstName": "alicia",
+        "secondName": "silva",
+        "city": "Salvador",
+        "bloodType": "O",
+        "age": 18
+    },
+    {
+        "firstName": "Roberta",
+        "secondName": "silva",
+        "city": "Salvador",
+        "bloodType": "AB",
+        "age": 11
+    }
+]
