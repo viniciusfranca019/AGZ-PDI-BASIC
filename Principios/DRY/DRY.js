@@ -1,5 +1,3 @@
-const util = require('../Util');
-
 // vamos agora aplicar o DRY no codigo anterior e ver como podemos refatorar esse codigo
 
 const getFullNameByPerson = (person) => {
