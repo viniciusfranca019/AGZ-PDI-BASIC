@@ -1,15 +1,12 @@
-Como é mais facil trabalharmos com contextos, vamos criar um:
+Hello friends
 
-iremos imaginar que temos uma pizzaria com o seguinte fluxo:
-
-cliente -> pedido -> cozinha -> preparar pedido -> levar pedido -> pagar -> finalizar
-
-vamos utilizar esse fluxo para criar classes, metodos e afins para exemplificar algum principios do PDI como:
-- DRY
-- KISS
-- SOLID
-- YAGNI
-- Objetos calistenicos
-- code smells
-
-se possivel iremos ter arquivos com o bad smell e outro refatorado aplicando os conceitos para um codigo mais limpo
+nesse modulo iremos utilizar o data.json , como fonte de dados para nosso codigo. ele possui a seguinte estrutura abaixo
+``` json
+    {
+        "firstName": "",
+        "secondName": "",
+        "city": "",
+        "bloodType": "",
+        "age": 0
+    }
+```
