@@ -8,9 +8,8 @@ class TechLead implements implementsCode {
     };
 };
 
-class JuniorDev implements implementsCode {
+class JuniorDev extends TechLead {
     implementsSomeGoodCode() : void {
         console.log('has a lot to learn here');
-        
     };
 }
