@@ -4,7 +4,7 @@
 // logo todos os metodos que exijam um tipo de iteração com a collection deverá ser feito através do peapleCollection
 
 const util = require('../Util/index');
-const { Person} = require('./Person')
+const { Person } = require('./Person')
 
 class PeapleCollection {
     constructor() {
@@ -14,7 +14,7 @@ class PeapleCollection {
 
     init = (peaple) => {
         const peapleFromJson = util.getPeaple();
-        peapleFromJson.forEach((person) => peaple.push(new Person(person)));
+        peapleFromJson.forEach(person => peaple.push(new Person(person)));
     };
 }
 
