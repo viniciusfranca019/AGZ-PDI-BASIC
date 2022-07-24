@@ -7,3 +7,7 @@ class Person {
         this.bloodType = bloodType;
     };
 };
+
+module.exports = {
+    Person,
+}
