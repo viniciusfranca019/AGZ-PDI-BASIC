@@ -22,7 +22,7 @@ class Armor {
     }
 }
 
-class Novice {
+export default class Novice {
     weapon : Weapon|null;
     armor : Armor|null;
 
