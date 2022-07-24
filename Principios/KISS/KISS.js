@@ -1,9 +1,6 @@
 // e como o KISS pode ser usado
 // para termos um codigo simples de execução, leitura e entendimento
 
-const util = require('../Util');
-
-
 const getPeapleWhoBirthsBefore2003 = (peaple) => {
     const now = new Date('2022-07-23 00:00:00');
     const year2003 = new Date('2003-01-01 00:00:00');
