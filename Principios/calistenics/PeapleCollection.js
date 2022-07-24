@@ -10,7 +10,6 @@ class PeapleCollection {
     constructor() {
         this.peaple = [];
         this.init(this.peaple);
-        console.log(this.peaple);
     }
 
     init = (peaple) => {
