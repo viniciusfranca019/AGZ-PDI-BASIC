@@ -3,6 +3,7 @@
 // e filtrar as pessoas que o fullName seja uma string que o a length seja um multiplipo de 6
 // perceba que em ambos os metodos eu necessito da construção do fullName, porem eu repito o mesmo processo duas vezes
 // vamos no arquivo DRY.js para ver como aplicar DRY nessa situação
+// salientando tambem o bad smell de duplicação de codigo
 
 const getPeapleWithFullNameGreaterThenNine= (peaple) => {
     const NUMBER_NINE = 9;
