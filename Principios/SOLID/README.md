@@ -1,0 +1,1 @@
+como o JavaScript nativo não suporta herenças e interface, utilizarei codigo em TypeScript para fazer os exemplos do SOLID
