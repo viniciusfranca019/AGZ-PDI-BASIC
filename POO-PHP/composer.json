@@ -1,0 +1,18 @@
+{
+    "name": "vini/poo-php",
+    "description": "show me the code poo php",
+    "type": "project",
+    "license": "ISC",
+    "autoload": {
+        "psr-4": {
+            "Vini\\PooPhp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "vinicius.franca",
+            "email": "viniciusfrancas019@gmail.com"
+        }
+    ],
+    "require": {}
+}
