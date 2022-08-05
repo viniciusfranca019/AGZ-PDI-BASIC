@@ -13,11 +13,11 @@ class LegalEntity extends AbstractPerson
 
     /**
      * @param string $name
-     * @param Cpf $cpf
-     * @param \DateTime $birthDate
+     * @param Cnpj $cnpj
+     * @param \DateTime $foundingDate
      * @param Address $address
      * @param Contact $contact
-     * @param PeapleCollection $dependents
+     * @param PeapleCollection $partners
      */
     public function __construct(string $name, Cnpj $cnpj, \DateTime $foundingDate, Address $address, Contact $contact, PeapleCollection $partners)
     {
