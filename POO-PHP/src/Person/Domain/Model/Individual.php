@@ -9,7 +9,7 @@ class Individual extends AbstractPerson
 {
     protected Cpf $cpf;
     protected \DateTime $birthDate;
-    protected PeapleCollection $dependents;
+    protected PeapleCollection|null $dependents;
 
     /**
      * @param string $name
@@ -17,9 +17,9 @@ class Individual extends AbstractPerson
      * @param \DateTime $birthDate
      * @param Address $address
      * @param Contact $contact
-     * @param PeapleCollection $dependents
+     * @param PeapleCollection|null $dependents
      */
-    public function __construct(string $name, Cpf $cpf, \DateTime $birthDate, Address $address, Contact $contact, PeapleCollection $dependents)
+    public function __construct(string $name, Cpf $cpf, \DateTime $birthDate, Address $address, Contact $contact, PeapleCollection|null $dependents = null)
     {
         parent::__construct($name, $cpf, $address, $contact);
         $this->cpf = $cpf;

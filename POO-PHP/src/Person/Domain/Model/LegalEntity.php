@@ -9,7 +9,7 @@ class LegalEntity extends AbstractPerson
 {
     protected Cnpj $cnpj;
     protected \DateTime $foundingDate;
-    protected PeapleCollection $partners;
+    protected PeapleCollection|null $partners;
 
     /**
      * @param string $name
@@ -17,9 +17,9 @@ class LegalEntity extends AbstractPerson
      * @param \DateTime $foundingDate
      * @param Address $address
      * @param Contact $contact
-     * @param PeapleCollection $partners
+     * @param PeapleCollection|null $partners
      */
-    public function __construct(string $name, Cnpj $cnpj, \DateTime $foundingDate, Address $address, Contact $contact, PeapleCollection $partners)
+    public function __construct(string $name, Cnpj $cnpj, \DateTime $foundingDate, Address $address, Contact $contact, PeapleCollection|null $partners = null)
     {
         parent::__construct($name, $cnpj, $address, $contact);
         $this->cnpj = $cnpj;

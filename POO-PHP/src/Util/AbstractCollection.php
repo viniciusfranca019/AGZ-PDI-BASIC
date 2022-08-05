@@ -2,16 +2,22 @@
 
 namespace Vini\PooPhp\Util;
 
+use ArrayIterator;
 use IteratorAggregate;
 
 // https://www.sitepoint.com/creating-strictly-typed-arrays-collections-php/
 
-abstract class AbstractCollection implements IteratorAggregate
+abstract class AbstractCollection implements CollectionInterface
 {
     protected array $list;
 
-    public function getIterator()
+    /**
+     * @param array $list
+     */
+    public function __construct(array $list = [])
     {
-        return new \ArrayIterator($this->list);
+        $this->list = $list;
     }
+
+    abstract public function add($element) : void;
 }
