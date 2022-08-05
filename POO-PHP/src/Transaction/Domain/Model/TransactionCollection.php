@@ -3,19 +3,23 @@
 namespace Vini\PooPhp\Transaction\Domain\Model;
 
 use Carbon\Carbon;
+use Vini\PooPhp\Util\AbstractCollection;
 
-class TransactionCollection extends \Vini\PooPhp\Util\AbstractCollection
+class TransactionCollection extends AbstractCollection
 {
     public function __construct(AbstractTransaction ...$transactionList)
     {
         parent::__construct($transactionList);
+        $this->list = $transactionList;
     }
 
-    public function add($transaction) : void {
-        if(!$transaction instanceof AbstractTransaction) {
-            throw new \Exception('Only Transactions are allowed to be part of this collection', 1659668084);
+    public function add($element): void
+    {
+        if(!$element instanceof AbstractTransaction) {
+            throw new \Exception('the item is not a Transaction', 54454324534);
         }
-        $this->list[] = $transaction;
+
+        $this->list[] = $element;
     }
 
     public function filterByPeriod(\DateTime $startDate, \DateTime $endDate) : array

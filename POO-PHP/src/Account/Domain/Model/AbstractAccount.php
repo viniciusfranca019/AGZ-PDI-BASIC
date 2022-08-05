@@ -8,7 +8,7 @@ use Vini\PooPhp\Transaction\Domain\Model\TransactionCollection;
 abstract class AbstractAccount
 {
     protected AbstractPerson $owner;
-    protected TransactionCollection|null $transactionCollection;
+    protected TransactionCollection $transactionCollection;
 
     /**
      * @param AbstractPerson $owner
@@ -16,5 +16,10 @@ abstract class AbstractAccount
     public function __construct(AbstractPerson $owner)
     {
         $this->owner = $owner;
+    }
+
+    public function getTransactions()
+    {
+        return $this->transactionCollection;
     }
 }

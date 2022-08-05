@@ -10,7 +10,6 @@ abstract class AbstractTransaction
     protected AbstractAccount $reciver;
     protected float $amount;
     protected \DateTime $transactionDate;
-    protected TransactionCollection $transactionCollection;
 
     /**
      * @param AbstractAccount $sender
@@ -24,14 +23,6 @@ abstract class AbstractTransaction
         $this->reciver = $reciver;
         $this->amount = $amount;
         $this->transactionDate = $transactionDate;
-    }
-
-    /**
-     * @return TransactionCollection
-     */
-    public function getTransactionCollection(): TransactionCollection
-    {
-        return $this->transactionCollection;
     }
 
     /**
