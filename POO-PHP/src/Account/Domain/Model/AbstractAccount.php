@@ -8,6 +8,7 @@ use Vini\PooPhp\Transaction\Domain\Model\TransactionCollection;
 abstract class AbstractAccount
 {
     protected AbstractPerson $owner;
+    // armengue para enquanto ainda nao existe banco
     protected TransactionCollection $transactionCollection;
 
     /**

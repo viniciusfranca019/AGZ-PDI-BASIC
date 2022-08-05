@@ -23,6 +23,14 @@ abstract class AbstractTransaction
         $this->reciver = $reciver;
         $this->amount = $amount;
         $this->transactionDate = $transactionDate;
+        $this->execute();
+    }
+
+    // armengue para enquanto ainda nao existe banco
+    private function execute()
+    {
+        $this->sender->getTransactions()->add($this);
+        $this->reciver->getTransactions()->add($this);
     }
 
     /**
