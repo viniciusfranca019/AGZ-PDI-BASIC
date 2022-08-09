@@ -29,9 +29,7 @@ abstract class AbstractTransaction
 
     private function execute()
     {
-        $this->sender->getTransactions()->add($this);
         $this->sender->doTransaction($this, TransactionOperators::SENDER_OPERADOR);
-        $this->reciver->getTransactions()->add($this);
         $this->reciver->doTransaction($this, TransactionOperators::RECIVER_OPERATOR);
     }
 

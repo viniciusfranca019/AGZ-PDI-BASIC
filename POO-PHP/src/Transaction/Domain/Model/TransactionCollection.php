@@ -4,7 +4,7 @@ namespace Vini\PooPhp\Transaction\Domain\Model;
 
 use Carbon\Carbon;
 use Vini\PooPhp\Util\AbstractCollection;
-// essa classe pode virar somente um iterator se utilizarmos banco para armazenar as transactions
+
 class TransactionCollection extends AbstractCollection
 {
     public function __construct(AbstractTransaction ...$transactionList)
@@ -40,5 +40,15 @@ class TransactionCollection extends AbstractCollection
     {
         $competenceCarbon = Carbon::createFromFormat('Y-m-d H:i:s.u', $competence->format('Y-m-d H:i:s.u'));
         return $this->filterByPeriod($competenceCarbon->startOfMonth(), $competenceCarbon->endOfMonth());
+    }
+
+    public function getSumFromCollection()
+    {
+        $result = 0.0;
+        foreach ($this->list as $transaction) {
+            $result += $transaction->getAmount();
+        }
+
+        return $result;
     }
 }

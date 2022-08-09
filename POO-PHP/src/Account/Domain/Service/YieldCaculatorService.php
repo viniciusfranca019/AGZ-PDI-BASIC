@@ -9,6 +9,6 @@ class YieldCaculatorService
 
     public function calculateMonthlyYieldRateByAnual(float $anualYieldRate)
     {
-        return ((self::HUNDRED_PERCENT_REPRESENTER + $anualYieldRate)) ** self::MONTHLY_RATE_CONVERTER - self::HUNDRED_PERCENT_REPRESENTER;
+        return (self::HUNDRED_PERCENT_REPRESENTER + $anualYieldRate) ** self::MONTHLY_RATE_CONVERTER - self::HUNDRED_PERCENT_REPRESENTER;
     }
 }

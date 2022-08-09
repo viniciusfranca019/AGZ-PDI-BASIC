@@ -10,4 +10,18 @@ class SavingAccount extends AbstractAccount
     {
         return self::ANNUAL_YIELD_RATE;
     }
+
+    public function getActualAmount()
+    {
+        $amount = 0.0;
+        $monthlyYieldRate = $this->getYieldCalculator()->calculateMonthlyYieldRateByAnual(self::ANNUAL_YIELD_RATE);
+        $period = $this->getAllCompetencesSinceOpeningDate();
+
+        foreach ($period as $competence) {
+            $balance = $this->getTransactionPeriodCollection()
+                ->getTransactionPeriodByCompetence($competence->toDateTime())
+                ->getAmountBalanceFromPeriod();
+            $amount = ($amount + $balance) * (1 + $monthlyYieldRate);
+        }
+    }
 }
