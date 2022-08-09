@@ -6,12 +6,8 @@ class SavingAccount extends AbstractAccount
 {
     const ANNUAL_YIELD_RATE = 0.05;
 
-    public function getYieldValue()
+    public function getAnnualYieldRate()
     {
-        // TODO: Implement getYieldValue() method.
-    }
-    public function getLiquidYieldValue()
-    {
-        // TODO: Implement getLiquidYieldValue() method.
+        return self::ANNUAL_YIELD_RATE;
     }
 }

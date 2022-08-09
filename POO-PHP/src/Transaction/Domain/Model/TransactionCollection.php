@@ -4,7 +4,7 @@ namespace Vini\PooPhp\Transaction\Domain\Model;
 
 use Carbon\Carbon;
 use Vini\PooPhp\Util\AbstractCollection;
-
+// essa classe pode virar somente um iterator se utilizarmos banco para armazenar as transactions
 class TransactionCollection extends AbstractCollection
 {
     public function __construct(AbstractTransaction ...$transactionList)

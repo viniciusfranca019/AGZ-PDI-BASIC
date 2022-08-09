@@ -12,6 +12,7 @@ abstract class AbstractTransaction
     protected \DateTime $transactionDate;
 
     /**
+     * @todo validar que nenhuma conta pode ter um actualAmount menor que zero
      * @param AbstractAccount $sender
      * @param AbstractAccount $reciver
      * @param float $amount
@@ -26,11 +27,20 @@ abstract class AbstractTransaction
         $this->execute();
     }
 
-    // armengue para enquanto ainda nao existe banco
     private function execute()
     {
         $this->sender->getTransactions()->add($this);
+        $this->sender->doTransaction($this, TransactionOperators::SENDER_OPERADOR);
         $this->reciver->getTransactions()->add($this);
+        $this->reciver->doTransaction($this, TransactionOperators::RECIVER_OPERATOR);
+    }
+
+    /**
+     * @return float
+     */
+    public function getAmount(): float
+    {
+        return $this->amount;
     }
 
     /**

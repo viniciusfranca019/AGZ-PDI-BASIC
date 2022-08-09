@@ -2,16 +2,12 @@
 
 namespace Vini\PooPhp\Account\Domain\Model;
 
-class InvestmentAccount extends AbstractAccount implements YieldInterface
+class InvestmentAccount extends AbstractAccount
 {
-    const ANNUAL_YIELD_RATE = 0.065;
+    const ANNUAL_YIELD_RATE = 0.065 + SavingAccount::ANNUAL_YIELD_RATE;
 
-    public function getYieldValue()
+    public function getAnnualYieldRate()
     {
-        // TODO: Implement getYieldValue() method.
-    }
-    public function getLiquidYieldValue()
-    {
-        // TODO: Implement getLiquidYieldValue() method.
+        return self::ANNUAL_YIELD_RATE;
     }
 }
