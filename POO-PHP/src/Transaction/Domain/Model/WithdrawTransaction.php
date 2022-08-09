@@ -13,5 +13,6 @@ class WithdrawTransaction extends AbstractTransaction
     public function __construct(CheckingAccount|SavingAccount $sender, ExternalAccount $reciver, float $amount, \DateTime $transactionDate)
     {
         parent::__construct($sender, $reciver, $amount, $transactionDate);
+        $this->execute();
     }
 }

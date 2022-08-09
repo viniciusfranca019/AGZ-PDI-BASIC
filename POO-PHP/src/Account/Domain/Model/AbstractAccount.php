@@ -7,6 +7,7 @@ use Carbon\CarbonPeriod;
 use Vini\PooPhp\Account\Domain\Service\YieldCaculatorService;
 use Vini\PooPhp\Person\Domain\Model\AbstractPerson;
 use Vini\PooPhp\Transaction\Domain\Model\AbstractTransaction;
+use Vini\PooPhp\Transaction\Domain\Model\RedemptionTransaction;
 use Vini\PooPhp\Transaction\Domain\Model\TransactionCollection;
 use Vini\PooPhp\Transaction\Domain\Model\TransactionPeriodCollection;
 
@@ -26,9 +27,15 @@ abstract class AbstractAccount
         $this->openingDate = $openingDate;
     }
 
+    /**
+     * @param AbstractTransaction $transaction
+     * @param int $transactionOperator
+     * @return void
+     * @throws \Exception
+     */
     public function doTransaction(AbstractTransaction $transaction, int $transactionOperator) : void
     {
-        if($transactionOperator > 0) {
+        if ($transactionOperator > 0) {
             $this->amount += $transaction->getAmount() * $transactionOperator;
             $this->transactionPeriodCollection->getTransactionPeriodByCompetence($transaction->getTransactionDate())
                 ->getAsReciverTransactionCollection()->add($transaction);

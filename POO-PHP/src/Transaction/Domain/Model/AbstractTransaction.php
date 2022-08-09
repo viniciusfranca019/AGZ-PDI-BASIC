@@ -24,10 +24,9 @@ abstract class AbstractTransaction
         $this->reciver = $reciver;
         $this->amount = $amount;
         $this->transactionDate = $transactionDate;
-        $this->execute();
     }
 
-    private function execute()
+    protected function execute()
     {
         $this->sender->doTransaction($this, TransactionOperators::SENDER_OPERADOR);
         $this->reciver->doTransaction($this, TransactionOperators::RECIVER_OPERATOR);
